@@ -1,4 +1,5 @@
 body {
+  background-image: url('./assets/mountains.jpg');
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +11,19 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.playButton button{
+  width: 20%;
+  height: 15%;
+  margin-left: 45em;
+}
+
+.sadKeanu {
+  margin-left: 15em;
+  width: 40%;
+}
+
+.amberHeard{
+  margin-left: 5em;
 }
