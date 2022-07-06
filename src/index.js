@@ -9,27 +9,13 @@ import amberHeard from './assets/amberHeard.webp';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
 
-const userName = {
-  firstName: 'John',
-  lastName: 'Wick'
-};
-
-const name = (userName) => {
-  return userName.firstName + " " + userName.lastName;
-};
-
-const num = React.createElement('p', null, '12345');
-
 const pElement =
   <>
-    <p>brah man like cha dude {name(userName)} </p>
-    {num}
+    
     <div className="playButton">
       <button type="button">PLAY</button>
     </div>
-    <div>
-      <input></input>
-    </div>
+  
     <img src={sadKeanu} alt="pic of sad Keanu" className="sadKeanu"></img>
     <img src={amberHeard} alt="pic ofamber Heard" className="amberHeard"></img>
   </>;
