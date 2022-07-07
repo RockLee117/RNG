@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { useNavigate } from "react-router-dom";
 import './styles/PlayGame.css';
+import Modal from './Modal.js';
 
 function PlayGame(){
     const navigate = useNavigate();
@@ -9,9 +10,10 @@ function PlayGame(){
     const incrementCount = () => {
         setCount(count + 1);        
     };
+
     return(
         <div>
-            <button>MENU</button>
+            <button onClick={Modal}>MENU</button>
             <p>Number of Tries: {count}</p>
         </div>
     );
