@@ -26,6 +26,7 @@ function PreGame() {
         </div>
         
         <button className='leftButton' onClick={decrementCount}></button>
+        {/* The number on screen (count) once you press the Go button will determine how many numbers you'll choose from in the next webpage */}
         <button className="GoButton" onClick={() => navigate("/playgame")}>Go</button>
         <button className='rightButton' onClick={incrementCount}></button>
       </div>

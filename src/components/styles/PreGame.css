@@ -19,6 +19,7 @@ p{
     margin-right: auto;
     text-align: center;
     padding: 0.5em;
+    border-radius: 0.5em;
 }
 
 .leftButton{
@@ -40,4 +41,5 @@ p{
 .GoButton{
     margin-top: 1em;
     background-color: lime;
+    color: black;
 }
