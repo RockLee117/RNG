@@ -1,0 +1,17 @@
+.main{
+    margin:auto;
+    text-align:center;
+    margin-top: 7em;
+}
+
+h2{
+    font-weight: bold;
+    font-size: larger;
+}
+
+.DirectionsText{
+    border: 1px solid;
+    padding: 0.5em;
+    margin:auto;
+    width: 30%;
+}
