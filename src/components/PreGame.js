@@ -4,6 +4,7 @@ import './styles/PreGame.css';
 
 function PreGame() {
   let num = 2;
+  const navigate = useNavigate();
   return(
     <>
       <div>
@@ -11,6 +12,7 @@ function PreGame() {
         <p>{num}</p>
         <button className='leftButton' onClick={num-=1}></button>
         <button className='rightButton' onClick={num+=1}></button>
+        <button onClick={() => navigate("/playgame")}>Go</button>
       </div>
     </>
   );
