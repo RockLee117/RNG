@@ -1,3 +1,6 @@
+# Order of Pages/Navigation: 
+Home.js -> Directions.js -> PreGame.js -> PlayGame.js
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
