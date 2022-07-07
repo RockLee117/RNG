@@ -20,6 +20,7 @@ function PreGame() {
     <>
       <div>
         <h2>How many numbers to you want to pick from?</h2>
+        <p>Use the below red and blue buttons to decrease and increase the number</p>
         <div className="number">
           {count}
         </div>
