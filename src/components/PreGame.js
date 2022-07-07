@@ -19,12 +19,14 @@ function PreGame() {
   return( 
     <>
       <div>
-        <h2>Pre-Game:</h2>
-        <p>How many numbers to you want to pick from?</p>
-        {count}
+        <h2>How many numbers to you want to pick from?</h2>
+        <div className="number">
+          {count}
+        </div>
+        
         <button className='leftButton' onClick={decrementCount}></button>
+        <button className="GoButton" onClick={() => navigate("/playgame")}>Go</button>
         <button className='rightButton' onClick={incrementCount}></button>
-        <button onClick={() => navigate("/playgame")}>Go</button>
       </div>
     </>
   );
