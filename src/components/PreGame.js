@@ -1,18 +1,29 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { useNavigate } from "react-router-dom";
 import './styles/PreGame.css';
 
 function PreGame() {
-  let num = 2;
   const navigate = useNavigate();
-  return(
+
+  const [count, setCount] = useState(2);
+  const incrementCount = () => {
+    if(count < 20){
+      setCount(count + 1);
+    }
+  };
+  const decrementCount = () => {
+    if(count > 2){
+      setCount(count - 1);
+    }
+  };
+  return( 
     <>
       <div>
         <h2>Pre-Game:</h2>
         <p>How many numbers to you want to pick from?</p>
-        <p>{num}</p>
-        <button className='leftButton' onClick={num-=1}></button>
-        <button className='rightButton' onClick={num+=1}></button>
+        {count}
+        <button className='leftButton' onClick={decrementCount}></button>
+        <button className='rightButton' onClick={incrementCount}></button>
         <button onClick={() => navigate("/playgame")}>Go</button>
       </div>
     </>
