@@ -1,5 +1,5 @@
 body {
-  background-image: url('./assets/mountains.jpg');
+  background-image: url('./assets/startBackground.jpg');
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -13,17 +13,21 @@ code {
     monospace;
 }
 
+.startPage .title {
+  font-weight:bold;
+  font-size: 5em;
+  margin-left: 8.45em;
+  margin-top: 1.6em;
+}
+
 .playButton button{
+  padding: 0.7em;
   width: 20%;
   height: 15%;
-  margin-left: 45em;
+  margin-left: 34.5em;
+  margin-top: 15em;
+  font-size: large;
+  font-weight: bold;
+  background-color: yellow;
 }
 
-.sadKeanu {
-  margin-left: 15em;
-  width: 40%;
-}
-
-.amberHeard{
-  margin-left: 5em;
-}

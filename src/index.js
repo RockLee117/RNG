@@ -3,25 +3,22 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import sadKeanu from './assets/sadKeanu.jpg';
-import amberHeard from './assets/amberHeard.webp';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
 
-const pElement =
-  <>
-    
-    <div className="playButton">
-      <button type="button">PLAY</button>
+const startPage =
+  (
+    <div className="startPage">
+      <h1 className="title">RNG</h1>
+      <div className="playButton">
+        <button type="button">PLAY</button>
+      </div>
     </div>
-  
-    <img src={sadKeanu} alt="pic of sad Keanu" className="sadKeanu"></img>
-    <img src={amberHeard} alt="pic ofamber Heard" className="amberHeard"></img>
-  </>;
-
+  );
 const main = ReactDOM.createRoot(document.getElementById('main'));
-main.render(pElement);
+main.render(startPage);
 
 
 
