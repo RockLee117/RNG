@@ -8,8 +8,8 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="about" element={<Directions />} />
-        <Route path="about/pregame" element={<PreGame />} />
+        <Route path="directions" element={<Directions />} />
+        <Route path="directions/pregame" element={<PreGame />} />
       </Routes>
     </div>
   );
@@ -17,16 +17,17 @@ function App() {
 export default App;
 
 function Home() {
+  
   return (
     <>
     <div className="startPage">
       <h1 className="title">RNG</h1>
       <div className="playButton">
-        <button type="button">PLAY</button>
+        <button >PLAY</button>
       </div>
     </div>
       <nav>
-        <Link to="/about">About</Link>
+        <Link to="/directions">About</Link>
       </nav>
     </>
   );
@@ -43,7 +44,7 @@ function Directions() {
       </main>
       <nav>
         <Link to="/">Home</Link>
-        <Link to="/about/pregame">Next</Link>
+        <Link to="/directions/pregame">Next</Link>
       </nav>
     </>
   );
@@ -56,7 +57,7 @@ function PreGame() {
         <h2>Pre-Game:</h2>
       </div>
       <nav>
-        
+
       </nav>
     </>
   );
