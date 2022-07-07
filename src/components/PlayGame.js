@@ -6,6 +6,10 @@ import Modal from './Modal.js';
 function PlayGame(){
     const navigate = useNavigate();
 
+    //modal implementation
+    const [openModal, setOpenModal] = useState(false);
+
+    // counts number of tries
     const [count, setCount] = useState(0);
     const incrementCount = () => {
         setCount(count + 1);        
@@ -13,7 +17,12 @@ function PlayGame(){
 
     return(
         <div>
-            <button onClick={Modal}>MENU</button>
+            <button onClick={() => {
+                setOpenModal(true);
+            }}>MENU</button>
+            {/* the openModal state is set to be false but when the MENU button is clicked, the openModal state is set to true so it's contents will render in */}
+            {openModal && <Modal setOpenModal={setOpenModal}/> }
+
             <p>Number of Tries: {count}</p>
         </div>
     );
