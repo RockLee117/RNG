@@ -3,18 +3,3 @@
   text-align: center;
 }
 
-.startPage .title {
-  font-weight:bold;
-  font-size: 5em;
-  margin-top: 1.6em;
-}
-
-.playButton button{
-  padding: 0.7em;
-  width: 20%;
-  height: 15%;
-  margin-top: 15em;
-  font-size: large;
-  font-weight: bold;
-  background-color: yellow;
-}

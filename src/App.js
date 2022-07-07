@@ -1,8 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
 import { Routes, Route, Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 import './App.css';
+import Home from './components/Home';
+import Directions from './components/Directions';
+import PreGame from './components/PreGame';
 
 function App() {
   return (
@@ -17,48 +18,6 @@ function App() {
 }
 export default App;
 
-function Home() {
-  const navigate = useNavigate();
-  return (
-    <>
-    <div className="startPage">
-      <h1 className="title">RNG</h1>
-      <div className="playButton">
-        <button onClick={() => navigate("/directions")}>PLAY</button>
-      </div>
-    </div>
-    </>
-  );
-}
-
-function Directions() {
-  const navigate = useNavigate();
-  return (
-    <>
-      <div>
-        <h2>Directions:</h2>
-        <p>
-          Do this then this
-        </p>
-        <button onClick={() => navigate("/pregame")}>Next</button>
-      </div>
-    </>
-  );
-}
-
-function PreGame() {
-  let num = 2;
-  return(
-    <>
-      <div>
-        <h2>Pre-Game:</h2>
-        <p>{num}</p>
-        <button className='leftButton' onClick={num-=1}></button>
-        <button className='rightButton' onClick={num+=1}></button>
-      </div>
-    </>
-  );
-}
 
 
 
