@@ -15,13 +15,23 @@ function PlayGame(){
         setCount(count + 1);        
     };
 
+    //the numbers that appear on screen based on user input
+    const arr = [1,2,3,4,5];
+    const numbers = arr.map((num) => {
+        return <button>{num}</button>
+    });
+
     return(
         <div>
-            <button onClick={() => {
-                setOpenModal(true);
-            }} className='menuButton'>MENU</button>
-            {/* the openModal state is set to be false but when the MENU button is clicked, the openModal state is set to true so it's contents will render in */}
-            {openModal && <Modal setOpenModal={setOpenModal}/> }
+            <div className='modal'>
+                <button onClick={() => {
+                    setOpenModal(true);
+                }} className='menuButton'>MENU</button>
+                {/* the openModal state is set to be false but when the MENU button is clicked, the openModal state is set to true so it's contents will render in */}
+                {openModal && <Modal setOpenModal={setOpenModal}/> }
+            </div>
+            
+            {numbers}
 
             <p>Number of Tries: {count}</p>
         </div>
