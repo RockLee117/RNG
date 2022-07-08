@@ -1,21 +1,23 @@
 import React, {useState} from 'react';
-import { useNavigate } from "react-router-dom";
+import { useSearchParams, useNavigate } from "react-router-dom";
 import './styles/PlayGame.css';
 import Modal from './Modal.js';
 
 function PlayGame(){
     const navigate = useNavigate();
+    const [searchparams] = useSearchParams();
 
     //modal implementation
     const [openModal, setOpenModal] = useState(false);
 
     // counts number of tries
-    const [count, setCount] = useState(0);
+    const [tries, setCount] = useState(0);
     const incrementCount = () => {
-        setCount(count + 1);        
+        setCount(tries + 1);        
     };
 
     //the numbers that appear on screen based on user input
+
     const arr = [1,2,3,4,5];
     const numbers = arr.map((num) => {
         return <button>{num}</button>
@@ -32,8 +34,9 @@ function PlayGame(){
             </div>
             
             {numbers}
+            {searchparams.get('num')}
 
-            <p>Number of Tries: {count}</p>
+            <p>Number of Tries: {tries}</p>
         </div>
     );
 }

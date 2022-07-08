@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { useNavigate } from "react-router-dom";
+import { createSearchParams, useNavigate } from "react-router-dom";
 import './styles/PreGame.css';
 
 function PreGame() {
@@ -26,8 +26,17 @@ function PreGame() {
         </div>
         
         <button className='leftButton' onClick={decrementCount}></button>
+
         {/* The number on screen (count) once you press the Go button will determine how many numbers you'll choose from in the next webpage */}
-        <button className="GoButton" onClick={() => navigate("/playgame")}>Go</button>
+        <button className="GoButton" onClick={() => {
+          navigate({
+            pathname: "/playgame",
+            search: createSearchParams({
+              num: count 
+            }).toString()
+          })
+        }}>Go</button>
+
         <button className='rightButton' onClick={incrementCount}></button>
       </div>
     </>
