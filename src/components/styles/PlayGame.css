@@ -10,3 +10,8 @@
 p{
     font-weight: bold;
 }
+
+.number{
+    border: 2px solid;
+    padding: 2px;
+}

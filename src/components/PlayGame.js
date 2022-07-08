@@ -18,9 +18,9 @@ function PlayGame(){
 
     //the numbers that appear on screen based on user input
 
-    const arr = [0,1,2,3,4];
+    const arr = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19];
     const numbers = arr.map((number) => {
-        return <button id={number}>{number}</button>
+        return <button className='number'>{number}</button>
     });
 
     const randomNum = Math.floor(Math.random() * searchparams.get('num'));
@@ -36,9 +36,15 @@ function PlayGame(){
             </div>
             
             <p>Number of Tries: {tries}</p>
-
-            {numbers}
-            {randomNum}
+            
+            <div className='numbers'>
+                {numbers}
+            </div>
+            
+            <p>Your Guess:</p>
+            <input type='text'></input>
+            
+            <p>random number: {randomNum}</p>
         </div>
     );
 }
