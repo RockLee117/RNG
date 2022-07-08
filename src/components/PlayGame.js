@@ -27,7 +27,7 @@ function PlayGame(){
         return <button className='number'>{number}</button>
     });
 
-    const [randomNum] = useState(Math.floor(Math.random() * searchparams.get('num')));
+    const [randomNum] = useState(1 + Math.floor(Math.random() * searchparams.get('num')));
 
     return(
         <div>
