@@ -5,12 +5,14 @@ import './styles/PlayAgain.css';
 function PlayAgain(){
     const navigate = useNavigate();
     return (
-        <div>
-            <h2>You Won!!!!</h2>
-            <img src='./assets/filthyfrank.gif' alt='gif of filthy frank'></img>
-            <button onClick={() => navigate('/pregame')}>Play Again</button>
-            <button onClick={() => navigate('/')}>Quit</button>
+        <div className="main">
+            <div className="PlayAgain">
+                <h1>You Won!!!!</h1>
+                <button className='one' onClick={() => navigate('/pregame')}>Play Again</button>
+                <button className='two' onClick={() => navigate('/')}>Quit</button>
+            </div>
         </div>
+        
     );
 }
 export default PlayAgain;

@@ -1,0 +1,24 @@
+.main{
+    margin-top: 5em;
+}
+
+.PlayAgain{
+    background-color: white;
+    border: 2px solid;
+    width: 20%;
+    margin: auto;
+    text-align: center;
+}
+
+.PlayAgain h1{
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.PlayAgain .one{
+    background-color: lime;
+}
+
+.PlayAgain .two{
+    background-color: rgb(255, 21, 21);
+}

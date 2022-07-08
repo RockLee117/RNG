@@ -75,7 +75,6 @@ function PlayGame(){
                 }}
             />
             
-            <p>random number: {randomNum}</p>
         </div>
     );
 }
