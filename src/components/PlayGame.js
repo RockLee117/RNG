@@ -18,10 +18,12 @@ function PlayGame(){
 
     //the numbers that appear on screen based on user input
 
-    const arr = [1,2,3,4,5];
-    const numbers = arr.map((num) => {
-        return <button>{num}</button>
+    const arr = [0,1,2,3,4];
+    const numbers = arr.map((number) => {
+        return <button id={number}>{number}</button>
     });
+
+    const randomNum = Math.floor(Math.random() * searchparams.get('num'));
 
     return(
         <div>
@@ -33,10 +35,10 @@ function PlayGame(){
                 {openModal && <Modal setOpenModal={setOpenModal}/> }
             </div>
             
-            {numbers}
-            {searchparams.get('num')}
-
             <p>Number of Tries: {tries}</p>
+
+            {numbers}
+            {randomNum}
         </div>
     );
 }
