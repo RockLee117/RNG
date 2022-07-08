@@ -50,18 +50,26 @@ function PlayGame(){
                 onKeyPress={(event) => {
                     if (event.key === "Enter") {
                         event.preventDefault();
+                        if(event.target.value == "") {
+                            return;
+                        }
+
                         incrementCount();
+                
                         if(event.target.value == randomNum){
                             window.alert("you guessed correct!");
                         }
                         else if(event.target.value < randomNum){
                             window.alert("pick a higher value number");
+                            event.target.value = "";
                         }
                         else if(event.target.value > randomNum){
                             window.alert("pick a lower value number");
+                            event.target.value = "";
                         }
                         else{
                             window.alert('make sure you are entering a number');
+                            event.target.value = "";
                         }
                     }
                 }}
