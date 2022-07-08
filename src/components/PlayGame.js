@@ -27,7 +27,7 @@ function PlayGame(){
         return <button className='number'>{number}</button>
     });
 
-    const randomNum = Math.floor(Math.random() * searchparams.get('num'));
+    const [randomNum] = useState(Math.floor(Math.random() * searchparams.get('num')));
 
     return(
         <div>
@@ -46,7 +46,26 @@ function PlayGame(){
             </div>
             
             <p>Your Guess:</p>
-            <input type='text'></input>
+            <input
+                onKeyPress={(event) => {
+                    if (event.key === "Enter") {
+                        event.preventDefault();
+                        incrementCount();
+                        if(event.target.value == randomNum){
+                            window.alert("you guessed correct!");
+                        }
+                        else if(event.target.value < randomNum){
+                            window.alert("pick a higher value number");
+                        }
+                        else if(event.target.value > randomNum){
+                            window.alert("pick a lower value number");
+                        }
+                        else{
+                            window.alert('make sure you are entering a number');
+                        }
+                    }
+                }}
+            />
             
             <p>random number: {randomNum}</p>
         </div>
