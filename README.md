@@ -1,5 +1,5 @@
 # Order of Pages/Navigation: 
-Home.js -> Directions.js -> PreGame.js -> PlayGame.js
+Home.js -> Directions.js -> PreGame.js -> PlayGame.js -> PlayAgain.js
 
 # Getting Started with Create React App
 
