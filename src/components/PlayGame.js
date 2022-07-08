@@ -19,7 +19,7 @@ function PlayGame(){
         <div>
             <button onClick={() => {
                 setOpenModal(true);
-            }}>MENU</button>
+            }} className='menuButton'>MENU</button>
             {/* the openModal state is set to be false but when the MENU button is clicked, the openModal state is set to true so it's contents will render in */}
             {openModal && <Modal setOpenModal={setOpenModal}/> }
 
