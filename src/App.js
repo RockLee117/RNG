@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Directions from './components/Directions';
 import PreGame from './components/PreGame';
 import PlayGame from './components/PlayGame';
+import PlayAgain from './components/PlayAgain';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="directions" element={<Directions />} />
         <Route path="pregame" element={<PreGame />} />
         <Route path="playgame" element={<PlayGame />} />
+        <Route path="playagain" element={<PlayAgain />} />
       </Routes>
     </div>
   );

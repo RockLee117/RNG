@@ -57,7 +57,7 @@ function PlayGame(){
                         incrementCount();
                 
                         if(event.target.value == randomNum){
-                            window.alert("you guessed correct!");
+                            navigate('/playagain');
                         }
                         else if(event.target.value < randomNum){
                             window.alert("pick a higher value number");
